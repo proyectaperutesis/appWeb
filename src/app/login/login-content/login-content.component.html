@@ -1,0 +1,34 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Login</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <div class="card-body">
+      <form #formLogin="ngForm" novalidate name="formLogin" class="row">
+        <div class="col-sm-4">
+            <mat-form-field class="example-full-width">
+                <mat-label for="username">Username:</mat-label>
+                <input matInput type="email" name="username" #username="ngModel" id="username" [(ngModel)]="request.username" required />
+                <mat-icon matSuffix>perm_identity</mat-icon>
+                <!-- <mat-error>
+                  <app-validators-messages [controlVar]="montoApertura" labelName="Monto Inicial"></app-validators-messages>
+                </mat-error> -->
+              </mat-form-field>
+        </div>
+        <div class="col-sm-4">
+            <mat-form-field class="example-full-width">
+                <mat-label for="password">Password:</mat-label>
+                <input matInput type="password" name="password" #password="ngModel" id="password" [(ngModel)]="request.password" required />
+                <mat-icon matSuffix>visibility_off</mat-icon>
+                <!-- <mat-error>
+                  <app-validators-messages [controlVar]="montoApertura" labelName="Monto Inicial"></app-validators-messages>
+                </mat-error> -->
+              </mat-form-field>
+        </div>
+        <div class="col-sm-4">
+            <button mat-raised-button (click)="login()" [disabled]="formLogin.isInvalid">Login</button>
+        </div>
+      </form>
+    </div>
+  </mat-card-content>
+</mat-card>
