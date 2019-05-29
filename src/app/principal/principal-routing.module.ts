@@ -4,7 +4,11 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: '', component: PrincipalComponent,
+    path: '', component: PrincipalComponent, children: [
+      {
+        path: 'gestion', loadChildren: '../modules/gestion/gestion.module#GestionModule'
+      }
+    ]
   }
 ];
 
