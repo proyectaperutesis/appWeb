@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { removeSession } from 'src/app/shared/auth/storage/token.storage';
 
 @Component({
   selector: 'app-principal',
@@ -13,6 +14,11 @@ export class PrincipalComponent implements OnInit {
   private opened: boolean;
 
   ngOnInit() {
+  }
+
+  private cerrarSesion(){
+    removeSession();
+    this._router.navigate(['/login']);
   }
 
   goToModulo(modulo: any) {

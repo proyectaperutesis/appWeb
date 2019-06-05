@@ -1,7 +1,7 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 import { Router } from '@angular/router';
 import { getNombreUsuario, getIdUsuario } from './shared/auth/storage/cabecera.storage';
-import { getToken } from './shared/auth/storage/toke.storage';
+import { getToken } from './shared/auth/storage/token.storage';
 
 @Component({
   selector: 'app-root',
